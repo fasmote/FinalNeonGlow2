@@ -1,0 +1,212 @@
+
+body {
+    font-family: 'Neon Tubes', sans-serif;
+    background: url('../images/neon_led_background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: rgba(0, 0, 50, 0.8);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ff0000;
+    text-shadow: 0 0 10px white, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-shadow: 0 0 5px white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff0066;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2rem;
+    color: #ff0000;
+    text-align: center;
+    text-shadow: 0 0 10px white, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px; /* Removed unnecessary extra margin */
+}
+
+.card {
+    background: rgba(30, 30, 60, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.8);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ff0066;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: white;
+    color: #ff0066;
+}
+
+/* Cart Styles */
+.cart {
+    position: sticky;
+    top: 10px;
+    right: 10px; /* Ensure it starts on the right */
+    width: 250px;
+    max-width: 300px;
+    background: rgba(0, 0, 50, 0.9);
+    padding: 15px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -4px 0 10px rgba(255, 0, 102, 0.8);
+    color: white;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.cart h3 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.cart p {
+    margin: 5px 0;
+}
+
+.cart button {
+    width: 100%;
+    padding: 5px;
+    background: #ff0066;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart button:hover {
+    background: white;
+    color: #ff0066;
+    transition: all 0.3s;
+}
+
+/* Subtotal */
+.subtotal {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    background: rgba(0, 0, 50, 0.8);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 102, 0.8);
+    z-index: 1001;
+}
+
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+form input, form textarea {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+}
+
+form button {
+    background: #ff0066;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: white;
+    color: #ff0066;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart {
+        width: 90%;
+        bottom: 10px;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%); /* Centered at the bottom for mobile */
+        margin: 0 auto;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    form {
+        width: 90%;
+    }
+}

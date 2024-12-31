@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonGlow Creations</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Neon+Tubes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>NeonGlow Creations</h1>
+        <p class="highlight">"Tenemos 8 exclusivos carteles disponibles."</p>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#quienes-somos">¿Quiénes somos?</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="cart" id="cart-display">
+        <h3>Tu Carrito</h3>
+        <div id="cart-items">Tu carrito está vacío.</div>
+        <button id="clear-cart">Vaciar Carrito</button>
+    </div>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a NeonGlow Creations</h2>
+            <p>Descubre nuestros carteles personalizados que iluminan cualquier espacio.</p>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="cards" id="product-list">
+                <!-- Las tarjetas de productos se generan dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section id="quienes-somos">
+            <div class="about-section">
+                <h2>¿Quiénes somos?</h2>
+                <p>Somos una empresa joven y dinámica que compite en el mercado de carteles de neon LED diseñados especialmente para locales de comida rápida. Ofrecemos productos únicos con la mejor calidad y diseño personalizado para resaltar la identidad de tu negocio.</p>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NeonGlow Creations - Todos los derechos reservados.</p>
+        <p>Redes sociales: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
